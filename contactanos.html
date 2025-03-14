@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es-MX">
   <head>
-    <title>Lunemi | Políticas y Términos</title>
+    <title>Lunemi | Contactanos </title>
     <meta charset="utf-8" />
     <meta name="format-detection" content="telephone=no" />
     <meta
@@ -147,87 +147,126 @@
         </div>
       </div>
       <!-- FIN MENU CELULAR -->
-   
-<!-- Sección de Políticas, Privacidad y Términos -->
-<div class="breadcumb-area">
-  <div class="container">
-      <div class="row">
-          <div class="col-md-12 txtc text-center ccase">
-              <div class="brpt brptsize">
-                  <h1 class="brcrumb_title">Políticas y Términos</h1>
-              </div>
-              <div class="breadcumb-inner">
-                  <ul>
-                      <li>Usted está aquí - </li>
-                      <li><a href="#">Inicio</a></li>
-                      <li> - <span class="current">Políticas y Términos</span></li>
-                  </ul>
-              </div>
-          </div>
-      </div>
-  </div>
-</div>
+      <script>
+        function enviarWhatsApp(event) {
+            event.preventDefault(); // Evita el envío del formulario por defecto
 
-<!-- Contenido de Políticas, Privacidad y Términos -->
-<div class="con_page_area">
-  <div class="container">
-      <div class="row cont_inner">
-          <div class="col-lg-12">
-              <div class="cont_left">
-                  <div class="apartment_area">
-                      <div class="apartment_text">
-                          <h4>Nuestras Políticas</h4>
-                          <h2>Política de Privacidad y Términos de Uso</h2>
-                      </div>
-                      <div class="policy_content">
-                          <h3>Política de Privacidad</h3>
-                          <p><strong>1. Recolección de Información:</strong>  
-                              En Joyería Lunemi, recopilamos datos personales como nombre, correo electrónico y número de teléfono solo con fines de contacto y prestación de servicios.</p>
+            // Obtener valores del formulario
+            let nombre = document.querySelector('input[name="name"]').value;
+            let email = document.querySelector('input[name="email"]').value;
+            let telefono = document.querySelector('input[name="number"]').value;
+            let asunto = document.querySelector('input[name="subject"]').value;
+            let mensaje = document.querySelector('textarea[name="comment"]').value;
 
-                          <p><strong>2. Uso de la Información:</strong>  
-                              La información proporcionada por los usuarios se utilizará exclusivamente para responder consultas, procesar pedidos y mejorar nuestros servicios.</p>
+            // Verificar que todos los campos estén llenos
+            if (nombre === "" || email === "" || telefono === "" || asunto === "" || mensaje === "") {
+                alert("Por favor, complete todos los campos.");
+                return;
+            }
 
-                          <p><strong>3. Protección de Datos:</strong>  
-                              Nos comprometemos a proteger la información personal de nuestros clientes y no compartiremos datos con terceros sin consentimiento previo.</p>
+            // Construir mensaje de WhatsApp
+            let texto = `Hola, soy *${nombre}* y quiero información sobre:
+            📩 *Correo:* ${email}
+            📞 *Teléfono:* ${telefono}
+            📌 *Asunto:* ${asunto}
+            📝 *Mensaje:* ${mensaje}`;
 
-                          <p><strong>4. Seguridad:</strong>  
-                              Implementamos medidas de seguridad para resguardar la información contra accesos no autorizados.</p>
+            // Formatear URL para WhatsApp
+            let url = `https://wa.me/529621396477?text=${encodeURIComponent(texto)}`;
 
-                          <p><strong>5. Derechos del Usuario:</strong>  
-                              Usted puede solicitar la eliminación o modificación de sus datos personales en cualquier momento.</p>
+            // Redirigir a WhatsApp
+            window.open(url, '_blank');
+        }
+    </script>
+</head>
+<body>
 
-                          <p><strong>6. Cambios en la Política:</strong>  
-                              Nos reservamos el derecho de modificar nuestras políticas sin previo aviso. Se recomienda revisar esta sección periódicamente.</p>
-                      </div>
+    <!-- Área de migas de pan -->
+    <div class="breadcumb-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 txtc text-center ccase">
+                    <div class="brpt brptsize">
+                        <h1 class="brcrumb_title">Contacto</h1>
+                    </div>
+                    <div class="breadcumb-inner">
+                        <ul>
+                            <li>Usted está aquí - </li>
+                            <li><a href="#">Inicio</a></li>
+                            <li> - <span class="current">Contacto</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin de área de migas de pan -->
 
-                      <div class="policy_content">
-                          <h3>Términos y Condiciones</h3>
-                          <p><strong>1. Uso del Sitio:</strong>  
-                              Al acceder a nuestra página web, usted acepta cumplir con estos términos y condiciones. El uso indebido del sitio puede resultar en la suspensión del acceso.</p>
+    <!-- Área de contacto -->
+    <div class="con_page_area">
+        <div class="container">
+            <div class="row cont_inner">
+                <div class="col-lg-6 col-md-6">
+                    <div class="cont_left">
+                        <div class="apartment_area">
+                            <div class="apartment_text">
+                                <h4>Contáctenos</h4>
+                                <h2>Solicite una cotización</h2>
+                            </div>
+                            <div class="witr_apartment_form">
+                                <form id="contact-form" onsubmit="enviarWhatsApp(event)">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="twr_form_box">
+                                                <input type="text" name="name" placeholder="Nombre*" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="twr_form_box">
+                                                <input type="email" name="email" placeholder="Correo electrónico*" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="twr_form_box">
+                                                <input type="number" name="number" placeholder="Teléfono*" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="twr_form_box">
+                                                <input type="text" name="subject" placeholder="Asunto*" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <div class="twr_form_box">
+                                                <textarea name="comment" placeholder="Mensaje*" required></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 col-md-12">
+                                            <div class="contact_page_button text-left">
+                                                <button type="submit" class="btn">Enviar mensaje</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 text-left">
+                                            <p class="form-messege"></p>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="con_page_witr">
+                        <div class="map_inner_area">
+                            <iframe src="https://maps.google.com/maps?q=Tapachula,Chiapas&amp;t=m&amp;z=10&amp;output=embed&amp;iwloc=near" title="Ubicación Joyería Lunemi"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-                          <p><strong>2. Propiedad Intelectual:</strong>  
-                              Todo el contenido, incluyendo imágenes, textos y logotipos, pertenece a Joyería Lunemi y está protegido por derechos de autor. No se permite su uso sin autorización.</p>
-
-                          <p><strong>3. Compras y Pagos:</strong>  
-                              Todas las compras están sujetas a disponibilidad de productos. Los pagos deben realizarse mediante los métodos aceptados en nuestra tienda.</p>
-
-                          <p><strong>4. Envíos y Devoluciones:</strong>  
-                              Los tiempos de envío varían según la ubicación. No aceptamos devoluciones de productos personalizados.</p>
-
-                          <p><strong>5. Responsabilidad:</strong>  
-                              Joyería Lunemi no se hace responsable por daños derivados del mal uso de los productos adquiridos.</p>
-
-                          <p><strong>6. Modificaciones:</strong>  
-                              Nos reservamos el derecho de modificar estos términos en cualquier momento sin previo aviso.</p>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-</div>
-
-      <!-- Área de pie de página -->
+    <!-- Área de pie de página -->
 <div class="witrfm_area">
     <div class="footer-middle">
       <div class="container">
@@ -241,6 +280,7 @@
                 <p>
                   En <strong>Lunemi</strong>, ofrecemos joyería de <strong>acero inoxidable</strong> y <strong>plata 925</strong>, diseñada para realzar tu estilo con elegancia y durabilidad. Encuentra piezas únicas que reflejan tu esencia.
                 </p>
+    
                 <div class="social-icons">
                   <a href="#"><i class="ti-facebook"></i></a>
                   <a href="https://www.instagram.com/Lunemi.jewelry/"><i class="ti-instagram"></i></a>
