@@ -2070,7 +2070,7 @@ p:last-of-type {
 }
 /*===== 5. About Area CSS =====*/
 .ft_ab_area {
-  background-image: url("/assets/images/Js_about_bg.jpg");
+  background-image: url("/assets/images/about_bg.jpg");
   background-position: top center;
   background-size: cover;
   padding: 120px 0 120px 0;
@@ -3113,7 +3113,7 @@ a.page-numbers {
 }
 /*===== 11. Contact Area CSS =====*/
 .cont_left_vd {
-  background-image: url("/assets/images/Js_video.jpg");
+  background-image: url("/assets/images/video.jpg");
   background-position: center center;
   background-size: cover;
   align-items: center;
@@ -3400,7 +3400,7 @@ p.form-messege {
   padding-top: 60px;
   padding-bottom: 60px;
   background-size: cover;
-  background-image: url("/assets/images/Js_footer_bg.jpg");
+  background-image: url("/assets/images/footer_bg.jpg");
 }
 .breadcumb-area.breadcumb_st2 {
   padding: 20px 20px;
@@ -3472,7 +3472,7 @@ p.form-messege {
 .witrfm_area {
   background-repeat: no-repeat;
   background-position: center center;
-  background-image: url("/assets/images/Js_footer_bg.jpg");
+  background-image: url("/assets/images/footer_bg.jpg");
   background-size: cover;
 }
 .witrfm_area:before {
@@ -4268,7 +4268,7 @@ code {
 }
 /* ===== 16. Call Area CSS ===== */
 .jl_call_area {
-  background-image: url("/assets/images/Js_call-to.jpg");
+  background-image: url("/assets/images/call-to.jpg");
   background-position: center center;
   background-size: cover;
   padding: 200px 0 200px 0;
