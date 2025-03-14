@@ -1779,7 +1779,7 @@ p:last-of-type {
 }
 /*===== 3. Slider Area CSS =====*/
 .slider_area {
-  background-image: url("/assets/images/slider1.jpg");
+  background-image: url("/assets/images/slider.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
